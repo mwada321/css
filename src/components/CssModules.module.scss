@@ -1,0 +1,30 @@
+// CSS Moduleのサンプル
+// ファイル名の後に .module.scssをつける
+// cssの為、パラメータを文字列（""で囲う）はしない。キャメルケースもハイフン表記。区切りも「,」ではなく「；」になる
+.container {
+  border: solid 2px #392eff; //　青枠
+  border-radius: 20px; //　角を丸くする
+  padding: 8px; //　　内側のスペース
+  margin: 8px; //　　横のスペース
+  display: flex; //　　横並び
+  justify-content: space-around; //　　　　　　横方向のレイアウト
+  align-items: center; //　　　　　　垂直方向のレイアウト
+}
+
+.title {
+  margin: 0;
+  color: #3d84a8;
+}
+.button {
+  background-color: #abedd8;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  //　cssの為、Sassの記法である様々な擬似要素が設定可能
+  //　以下はマウスを乗せた時の挙動を設定
+  &:hover {
+    background-color: #46cdcf;
+    color: #fff;
+    cursor: pointer;
+  }
+}
